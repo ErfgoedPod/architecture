@@ -1,16 +1,145 @@
 <pre class='metadata'>
-Title: Your Spec Title
-Shortname: your-spec
+Title: Architecture Decentralized Digital Heritage Network
+Shortname: architecture
 Level: 1
 Status: LS
-URL: http://example.com/url-this-spec-will-live-at
-Editor: Your Name, Your Company http://example.com/your-company, your-email@example.com, http://example.com/your-personal-website
-Abstract: A short description of your spec, one or two sentences.
+URL: https://github.com/ErfgoedPod/architecture
+Editor: Miel Vander Sande, meemoo http://meemoo.be, miel.vandersande@meemoo.be
+Abstract: This specification gives a high-level overview of a decentralized digital heritage network using principles from Solid and the Researcher Pod project.
+Markup Shorthands: markdown yes
 </pre>
 
-Introduction {#intro}
-=====================
+# Set of documents
 
-Introduction here.
+This document is one of the *Decentralized Digital Heritage Network* specifications produced by the ErfgoedPod project by [Netwerk Digitaal Erfgoed](https://netwerkdigitaalerfgoed.nl), [meemoo - Flemish Institute for Archiving](https://meemoo.be) and [Ghent University - IDLab](http://idlab.ugent.be):
 
-Test build: d929bb9
+1. [Architecture Decentralized Digital Heritage Network](/architecture/) (this document)
+2. [Use cases & Business processes digital heritage network](/usecases/)
+3. [Common infrastructure setups of a Cultural Heritage Institutions](/common-setups/)
+4. [Orchestrator](/orchestrator/)
+
+# Introduction
+
+The *Decentralized Digital Heritage Network* is a protocol and a set of best practices to establish a sustainable exchange network of digital heritage data between cultural heritage institutions and their services.  
+It is an application of the [generic ResearcherPod boilerplate architecture](https://github.com/mellonscholarlycommunication) for decentralized Web networks using the [[solid-protocol]] and [[!ACTIVITYSTREAMS-VOCABULARY]].
+This document lays out the high-level concepts and design of Decentralized Digital Heritage Network.
+
+# Overview
+
+Issue: create diagram when more is known about the components on mellon side
+
+# Actors
+
+A Decentralized Digital Heritage Network consists of multiple parties that actively participate in the exchange.
+Such party is henceforth considered a network <dfn export>actor</dfn>.
+
+All actors operate under the same protocol, but can differ in purpose.
+We distinguish the following types of actors:
+
+- a <dfn export>Cultural Heritage Institution</dfn>: an individual or organisation producing and sharing digital heritage data;
+- a <dfn export>Digital Heritage Service provider</dfn>: an organisation consuming and processing digital heritage data to provide a service.
+
+# Artefacts
+
+A <dfn export>Digital Heritage Artefact</dfn> is a unit digital heritage data that is the object of exchange between actors.
+We distinguish the following types of artefacts:
+- a <dfn export>dataset</dfn>
+- a <dfn export>datasets description</dfn>
+- an <dfn export>organisation profile</dfn>
+
+# Components
+
+## Digital Heritage Pod (Erfgoedpod)
+
+The <dfn export>Digital Heritage Pod</dfn> is a [=Cultural Heritage Institution=]'s main exchange hub for sharing digital heritage information with external [=digital heritage service provider=] and other [=cultural heritage institutions=].
+
+The Digital Heritage Pod's core fundament is a [Solid Data Pod](https://solid.github.io/specification/protocol#data-pod) consisting of:
+- a <dfn export>datastore</dfn> to store [=digital heritage artefacts=] such as datasets, datasets descriptions, or profiles of organisations;
+- a [Web Access Control (WAC) mechanism](https://solid.github.io/specification/protocol#web-access-control) to manage read-write access data pod resources;
+- a [Linked Data Notification (LDN) inbox](https://solid.github.io/specification/protocol#notifications) receive Linked Data Notifications [[!LDN]] from other actors;
+- a [Linked Data Platform (LDP) subset implementation](https://solid.github.io/specification/protocol#auxiliary-resources-description-resource) to expose the datastore contents and the inbox to other actors.
+
+The [=digital heritage artefacts=] stored in the [=datastore=] originate from two data management systems at the [=cultural heritage institution=]:
+
+- a [Digital Asset Management System](/common-setups#): Software used by the cultural heritage institution to organize, control, and manage collections objects by "tracking all information related to and about" those objects.
+- a [Collections Management System](/common-setups#): A centralized system where cultural heritage institutions (efficiently) store, organize, manage, access and distribute their media assets.
+
+
+
+
+
+
+<pre class='include'>
+path: images/erfgoedpod-Erfgoedpod.svg
+</pre>
+
+## Participating in a decentralized Digital Heritage Network
+
+To actively participate in the network, an certain actor  requires a few extra components complementary to its Digital Heritage Pod that facilitate interaction with other actors.
+
+<pre class='include'>
+path: images/erfgoedpod-BasicSetup.svg
+</pre>
+
+: Policy
+:: Set of rules that dictates what actions need to be taken when a lifecycle event occurs. These originate from the digital heritage network participation agreement, possibly amended with procedures imposed by the institution, the discipline, or personal preference.
+: Orchestrator
+:: Agent that watches the Data Pod's inbox, and can interpret and execute the Policy. 
+: Dashboard
+:: User interface for users to interact with the contents of the Data Pod. 
+
+## Collection information from a decentralized Digital Heritage Network
+
+Actors retrieve two types of information from the network:
+
+- lifecycle information: given an object, what actions has it been involved in? eg. added to register X, indexed by Y, or archived by Z.
+- descriptive information: given descriptive information, what objects match this description? eg. what Pods have works from Peter Paul Rubens
+
+: Query index  
+:: An index that allows for fine-grained search into the contents of the files stored in the Data Pod. 
+: Collector    
+:: Agent that queries or craws the decentralized network for distributed information targeted by a certain query that needs solving. 
+: Filters      
+:: Description of the information that needs to be collected.
+
+<pre class=include>
+path: images/erfgoedpod-Collector.svg
+</pre>
+
+
+
+<pre class=biblio>
+{
+	"solid-oidc": {
+		"authors": [
+			"Aaron Coburn (Inrupt)",
+			"elf Pavlik",
+			"Dmitri Zagidulin" 
+		],
+		"href": "https://solid.github.io/authentication-panel/solid-oidc/",
+		"title": "SOLID-OIDC",
+		"status": "Editor’s Draft",
+		"publisher": "Solid project",
+		"deliveredBy": [
+			"https://www.w3.org/community/solid/"
+		]
+	},
+	"solid-protocol": {
+		"authors": [
+			"Sarven Capadisli",
+			"Tim Berners-Lee",
+			"Ruben Verborgh",
+			"Kjetil Kjernsmo",
+			"Justin Bingham",
+			"Dmitri Zagidulin"
+		],
+		"href": "https://solidproject.org/TR/protocol/",
+		"title": "The Solid Protocol",
+		"status": "Editor’s Draft",
+		"publisher": "Solid project",
+		"deliveredBy": [
+			"https://www.w3.org/community/solid/"
+		]
+	}
+}
+</pre>
