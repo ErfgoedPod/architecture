@@ -18,17 +18,20 @@ This document is one of the *Decentralized Digital Heritage Network* specificati
 3. [Common infrastructure setups of a Cultural Heritage Institutions](/common-setups/)
 4. [Orchestrator](/orchestrator/)
 
-# Introduction
+Introduction {#introduction}
+============================
 
 The *Decentralized Digital Heritage Network* is a protocol and a set of best practices to establish a sustainable exchange network of digital heritage data between cultural heritage institutions and their services.  
 It is an application of the [generic ResearcherPod boilerplate architecture](https://github.com/mellonscholarlycommunication) for decentralized Web networks using the [[solid-protocol]] and [[!ACTIVITYSTREAMS-VOCABULARY]].
 This document lays out the high-level concepts and design of Decentralized Digital Heritage Network.
 
-# Overview
+Overview {#overview}
+======================
 
 Issue: create diagram when more is known about the components on mellon side
 
-# Actors
+Actors {#actors}
+================
 
 A Decentralized Digital Heritage Network consists of multiple parties that actively participate in the exchange.
 Such party is henceforth considered a network <dfn export>actor</dfn>.
@@ -40,7 +43,8 @@ We distinguish the following types of actors:
 - a <dfn export>Cultural Heritage Institution</dfn>: an individual or organisation producing and sharing digital heritage data;
 - a <dfn export>Digital Heritage Service provider</dfn>: an organisation consuming and processing digital heritage data to provide a service.
 
-# Artefacts
+Artefacts {#artefacts}
+=================
 
 A <dfn export>Digital Heritage Artefact</dfn> is a unit digital heritage data that is the object of exchange between actors.
 
@@ -70,9 +74,10 @@ We distinguish the following types of lifecycle events:
 
 Issue: complete the list of lifecycle events.
 
-# Components
+Components {#components}
+========================
 
-## Digital Heritage Pod (Erfgoedpod)
+## Digital Heritage Pod {#pod}
 
 The <dfn export>Digital Heritage Pod</dfn> is a [=Cultural Heritage Institution=]'s main exchange hub for sharing digital heritage information with external [=digital heritage service provider=] and other [=cultural heritage institutions=].
 By design, the [=Digital Heritage Pod=] is a passive component: it can respond to requests for the [=digital heritage artefacts=] it stores, 
@@ -93,28 +98,22 @@ The [=digital heritage artefacts=] stored in the [=datastore=] originate from tw
 path: images/erfgoedpod-Erfgoedpod.svg
 </pre>
 
-## Participating in a decentralized Digital Heritage Network
+## Participating in a decentralized Digital Heritage Network {#participate}
 
 To actively participate in the network, 
 [=actors=] require a few components that enable them to interact with other [=actors=].
-For [=cultural heritage intitutions=]), 
+For [=cultural heritage institutions=]), 
 these components commonly complement a [=digital heritage pod=].  
 
 Interations between [=actors=] are always about a [=digital heritage artefact=] and result in a [=lifecycle event=] of that artefact.
 
-
-: Policy
-:: Set of rules that dictates what actions need to be taken when a lifecycle event occurs. These originate from the digital heritage network participation agreement, possibly amended with procedures imposed by the institution, the discipline, or personal preference.
-: Orchestrator
-:: Agent that watches the Data Pod's inbox, and can interpret and execute the Policy. 
-: Dashboard
-:: User interface for users to interact with the contents of the Data Pod. 
+- a [Policy](/orchestrator#policy): set of rules that dictates what actions need to be taken when a [=lifecycle event=] occurs. These originate from the digital heritage network participation agreement, possibly amended with procedures imposed by the institution, the discipline, or personal preference.
+- an [Orchestrator](/orchestrator#orchestrator): an autonomeous that watches the [=digital heritage pod=]'s inbox, and can interpret and execute the [policy](/orchestrator#policy).
+- a [Dashboard](/orchestrator#dashboard): a user interface for users to interact with the contents of the [=digital heritage pod=].
 
 <pre class='include'>
 path: images/erfgoedpod-BasicSetup.svg
 </pre>
-
-
 
 ## Collection information from a decentralized Digital Heritage Network
 
@@ -133,8 +132,6 @@ Actors retrieve two types of information from the network:
 <pre class=include>
 path: images/erfgoedpod-Collector.svg
 </pre>
-
-
 
 <pre class=biblio>
 {
