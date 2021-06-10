@@ -131,7 +131,7 @@ Components {#components}
 
 ## Digital Heritage Pod {#pod}
 
-The <dfn export>Digital Heritage Pod</dfn> is a [=Cultural Heritage Institution=]'s main exchange hub for sharing digital heritage information with external [=digital heritage service provider=] and other [=cultural heritage institutions=].
+The <dfn export>Digital Heritage Pod</dfn> is a [=Cultural Heritage Institution=]'s main exchange hub for sharing digital heritage information with external [=service provider=] and other [=cultural heritage institutions=].
 By design, the [=Digital Heritage Pod=] is a passive component: it can respond to requests for the [=digital heritage artefacts=] it stores, 
 but cannot start an interaction with other [=actors=] (see the additional components layed out in [[#participate]] for active participation).  
 
@@ -146,25 +146,40 @@ The [=digital heritage artefacts=] stored in the [=datastore=] originate from tw
 - a [Digital Asset Management System](/common-setups#): Software used by the cultural heritage institution to organize, control, and manage collections objects by "tracking all information related to and about" those objects.
 - a [Collections Management System](/common-setups#): A centralized system where cultural heritage institutions (efficiently) store, organize, manage, access and distribute their media assets.
 
+Finally, the pod exposes a <dfn export>Artefact Lifecycle Event Log</dfn>: a resource containing an immutable log that records all lifecycle events related to artefacts known to the pod.
+
 <pre class='include'>
 path: images/erfgoedpod-Erfgoedpod.svg
 </pre>
 
-## Service Hubs ## {#hubs}
 
 
+## Digital Heritage Service Hub ## {#hubs}
+
+A <dfn export>Digital Heritage Service Hub</dfn> is a [=service provider=]'s exchange hub to make its services available to other network actors such as [=cultural heritage institutions=] or [=service portals=].
+It consists of some of the same interface components as the [=Digital Heritage Pod=]:
+
+- a [Linked Data Notification (LDN) inbox](https://solid.github.io/specification/protocol#notifications) receive Linked Data Notifications [[!LDN]] from other actors;
+- a [Linked Data Platform (LDP) subset implementation](https://solid.github.io/specification/protocol#auxiliary-resources-description-resource) to expose the inbox to other actors;
+- an [=Artefact Lifecycle Event Log=] resource that publishes and records all lifecycle events related to artefacts processed by the service provider. 
+
+In contrast to the [=Digital Heritage Pod=], it is unspecified what other subcomponents a service hub should provide. Processes that store data, provide security or execute the services are considered a black box.
+
+<pre class='include'>
+path: images/erfgoedpod-ServiceHub.svg
+</pre>
 
 ## Participating in a decentralized Digital Heritage Network {#participate}
 
 To actively participate in the network, 
 [=actors=] require a few components that enable them to interact with other [=actors=].
 For [=cultural heritage institutions=]), 
-these components commonly complement a [=digital heritage pod=].  
+these components commonly complement a [=digital heritage pod=] or [=Digital Heritage Service Hub=].  
 
 Interations between [=actors=] are always about a [=digital heritage artefact=] and result in a [=lifecycle event=] of that artefact.
 
 - a [Policy](/orchestrator#policy): set of rules that dictates what actions need to be taken when a [=lifecycle event=] occurs. These originate from the digital heritage network participation agreement, possibly amended with procedures imposed by the institution, the discipline, or personal preference.
-- an [Orchestrator](/orchestrator#orchestrator): an autonomeous that watches the [=digital heritage pod=]'s inbox, and can interpret and execute the [policy](/orchestrator#policy).
+- an [Orchestrator](/orchestrator#orchestrator): an autonomeous that watches the [=digital heritage pod=] or [=Digital Heritage Service Hub=]'s inbox, and can interpret and execute the [policy](/orchestrator#policy).
 - a [Dashboard](/orchestrator#dashboard): a user interface for users to interact with the contents of the [=digital heritage pod=].
 
 <pre class='include'>
