@@ -9,6 +9,34 @@ Abstract: This specification gives a high-level overview of a decentralized digi
 Markup Shorthands: markdown yes
 </pre>
 
+<style>
+table {
+  margin: 25px auto;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #005A9C;
+}
+table tr:hover {
+  background: #f4f4f4;
+}
+table tr:hover td {
+  color: #555;
+}
+table th, table td {
+  color: #999;
+  border: 1px solid #eee;
+  padding: 12px 12px;
+  border-collapse: collapse;
+}
+table th {
+  background: #005A9C;
+  color: #fff;
+}
+table th.last {
+  border-right: none;
+}
+</style>
+
 # Set of documents
 
 This document is one of the *Decentralized Digital Heritage Network* specifications produced by the ErfgoedPod project by [Netwerk Digitaal Erfgoed](https://netwerkdigitaalerfgoed.nl), [meemoo - Flemish Institute for Archiving](https://meemoo.be) and [Ghent University - IDLab](http://idlab.ugent.be):
@@ -17,7 +45,7 @@ This document is one of the *Decentralized Digital Heritage Network* specificati
 2. [Use cases & Business processes](/usecases/)
 3. [Common infrastructure in Cultural Heritage Institutions](/common-setups/)
 
-This project also contributes to the following companion specifications of the [ResearcherPod](https://mellonscholarlycommunication.github.io/spec-overview) project:
+This project also contributes to the following companion specifications of the [ResearcherPod](https://knows.idlab.ugent.be/projects/mellon) project:
 
 1. [Orchestrator](https://mellonscholarlycommunication.github.io/spec-orchestrator/) 
 2. [Data Pod](https://mellonscholarlycommunication.github.io/spec-datapod/)
@@ -28,11 +56,20 @@ Introduction {#introduction}
 ============================
 
 The *Decentralized Digital Heritage Network* is a protocol and a set of best practices to establish a sustainable exchange network of digital heritage data between cultural heritage institutions and their services.  
-It is an application of the [generic ResearcherPod boilerplate architecture](https://github.com/mellonscholarlycommunication) for decentralized Web networks using the [[solid-protocol]] and [[!ACTIVITYSTREAMS-VOCABULARY]].
+It is an application of the [generic ResearcherPod boilerplate architecture](https://github.com/mellonscholarlycommunication) for decentralized Web networks based on the [[solid-protocol]] and [[!ACTIVITYSTREAMS-VOCABULARY]].
 This document lays out the high-level concepts and design of Decentralized Digital Heritage Network.
 
 Overview {#overview}
 ======================
+
+The decentralized digital heritage network
+
+
+
+
+
+
+
 
 Issue: create diagram when more is known about the components on mellon side
 
@@ -42,41 +79,50 @@ Actors {#actors}
 A Decentralized Digital Heritage Network consists of multiple parties that actively participate in the exchange.
 Such party is henceforth considered a network <dfn export>actor</dfn>.
 
-All actors operate under the same protocol, but can differ in purpose.
+All [=actors=] operate under the same protocol, but can differ in purpose.
+Every actor in a decentralized digital heritage network is therefore one of the following types:
 
-We distinguish the following types of actors:
+:: <dfn export>Cultural Heritage Institution</dfn>
+: an individual or organisation producing and sharing digital heritage data;
+:: <dfn export>Service provider</dfn>
+: an organisation consuming and processing digital heritage data to provide a service to other actors in the network;
+:: <dfn export>Service portal</dfn>
+: an organisation consuming digital heritage data to provide a service to end-users.
 
-- a <dfn export>Cultural Heritage Institution</dfn>: an individual or organisation producing and sharing digital heritage data;
-- a <dfn export>Digital Heritage Service provider</dfn>: an organisation consuming and processing digital heritage data to provide a service.
 
 Artefacts {#artefacts}
 =================
 
 A <dfn export>Digital Heritage Artefact</dfn> is a unit digital heritage data that is the object of exchange between actors.
-
 We distinguish the following types of artefacts:
-- a <dfn export>dataset</dfn>
-- a <dfn export>datasets description</dfn>
-- an <dfn export>organisation profile</dfn>
 
-Issue: complete the list of artefact types.
+:: <dfn export>dataset</dfn>
+: The description of a collection of data as defined in [[requirements-datasets#dataset]].
+:: <dfn export>datasets description</dfn>
+: Metadata that publishers should provide about their dataset aligned with the machine-readable publication model described in [[requirements-datasets]].
+:: <dfn export>actor profile</dfn>
+: A description of an actor that is a member of the network. Often, this is about the organisation acting as [=cultural heritage institution=], [=service provider=], or [=service portal=]. It is used as part of a registration or identification proces.
 
 All artefacts have a lifecycle that consists of a sequence of [=lifecycle events=].
 A <dfn export>Lifecycle Event</dfn> is a documented activity that reflect changes to the artefact's presence or positioning on the network.
 The occurence of such event can render the artefact eligable for certain services or exchanges. 
 For instance, a dataset (= artefact) can only be archived by an archiving service once its registered (= lifecycle event).
 
+<pre class='include'>
+path: images/lifecycle.svg
+</pre>
+
 We distinguish the following types of lifecycle events:
-- `create`
-- `destroy`
-- `update`
-- `store`
-- `announce`
-- `register`
-- `preserve`
-- `index`
-- `enrich`
-- `link`
+- `create`: the artefact is created
+- `destroy`: the artefact is no longer available
+- `update`: a new version of the artefact is available
+- `store`: the artefact was stored in a [=Digital Heritage Pod=]
+- `announce`: the artefact was promoted over the network
+- `register`: a registry (service provider) added the artefact to its service
+- `preserve`: an archive (service provider) stored the artefact for long-term preservation 
+- `index`: a repository indexed the artefact for search
+- `enrich`: the artefact's metadata was enriched
+- `link`: a link was added to or from the artefact
 
 Issue: complete the list of lifecycle events.
 
@@ -103,6 +149,10 @@ The [=digital heritage artefacts=] stored in the [=datastore=] originate from tw
 <pre class='include'>
 path: images/erfgoedpod-Erfgoedpod.svg
 </pre>
+
+## Service Hubs ## {#hubs}
+
+
 
 ## Participating in a decentralized Digital Heritage Network {#participate}
 
@@ -170,6 +220,19 @@ path: images/erfgoedpod-Collector.svg
 		"publisher": "Solid project",
 		"deliveredBy": [
 			"https://www.w3.org/community/solid/"
+		]
+	},
+	"requirements-datasets": {
+		"authors": [
+			"David de Boer",
+			"Bob Coret"
+		],
+		"href": "https://netwerk-digitaal-erfgoed.github.io/requirements-datasets",
+		"title": "Requirements for Datasets",
+		"status": "Living Standard",
+		"publisher": "Netwerk Digitaal Erfgoed",
+		"deliveredBy": [
+			"https://netwerkdigitaalerfgoed.nl"
 		]
 	}
 }
