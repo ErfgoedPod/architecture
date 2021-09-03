@@ -4,7 +4,7 @@ Shortname: architecture
 Level: 1
 Status: LS
 URL: https://github.com/ErfgoedPod/architecture
-Editor: Miel Vander Sande, [meemoo - Flemish Institute for Archives](https://meemoo.be), miel.vandersande@meemoo.be
+Editor: Miel Vander Sande, [meemoo](https://meemoo.be), miel.vandersande@meemoo.be
 Abstract: This specification gives a high-level overview of a decentralized digital heritage network using principles from Solid and the Researcher Pod project.
 Markup Shorthands: markdown yes
 </pre>
@@ -39,7 +39,7 @@ table th.last {
 
 # Set of documents
 
-This document is one of the *Decentralized Digital Heritage Network* specifications produced by the ErfgoedPod project by [Netwerk Digitaal Erfgoed](https://netwerkdigitaalerfgoed.nl), [meemoo - Flemish Institute for Archiving](https://meemoo.be) and [Ghent University - IDLab](http://idlab.ugent.be):
+This document is one of the *Decentralized Digital Heritage Network* specifications produced by the ErfgoedPod project by [Netwerk Digitaal Erfgoed](https://netwerkdigitaalerfgoed.nl), [meemoo - Flemish Institute for Archives](https://meemoo.be) and [Ghent University - IDLab](http://idlab.ugent.be):
 
 1. [Decentralized Digital Heritage Network architecture](/architecture/) (this document)
 2. [Use cases & Business processes](/usecases/)
@@ -253,7 +253,7 @@ _:1 a lode:Event;
 ...
 ```
 
-``` log
+``` 
 [2020-04-12T10:30:00+10:00] Created pod.kb.nl/dataset.ttl
 [2020-04-12T11:30:00+10:00] Created pod.kb.nl/dataset-desc.ttl
 [2020-04-12T12:30:00+10:00] Requested registration: pod.kb.nl/dataset.ttl with registry.nde.nl
