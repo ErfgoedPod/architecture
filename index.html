@@ -1223,7 +1223,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5f7b0e20, updated Tue Aug 18 15:46:28 2020 -0700" name="generator">
   <link href="https://github.com/ErfgoedPod/architecture" rel="canonical">
-  <meta content="5e641b1d042baf278f7eb87d0adb8730e56144b3" name="document-revision">
+  <meta content="76d3221373f21e622afd900b27d9e0d3c5686a06" name="document-revision">
 <style>
 table {
   margin: 25px auto;
@@ -1435,11 +1435,69 @@ dfn > a.self-link:hover {
 a.self-link::before            { content: "¶"; }
 .heading > a.self-link::before { content: "§"; }
 dfn > a.self-link::before      { content: "#"; }</style>
+<style>/* style-syntax-highlighting */
+
+.highlight:not(.idl) { background: hsl(24, 20%, 95%); }
+code.highlight { padding: .1em; border-radius: .3em; }
+pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+c-[a] { color: #990055 } /* Keyword.Declaration */
+c-[b] { color: #990055 } /* Keyword.Type */
+c-[c] { color: #708090 } /* Comment */
+c-[d] { color: #708090 } /* Comment.Multiline */
+c-[e] { color: #0077aa } /* Name.Attribute */
+c-[f] { color: #669900 } /* Name.Tag */
+c-[g] { color: #222222 } /* Name.Variable */
+c-[k] { color: #990055 } /* Keyword */
+c-[l] { color: #000000 } /* Literal */
+c-[m] { color: #000000 } /* Literal.Number */
+c-[n] { color: #0077aa } /* Name */
+c-[o] { color: #999999 } /* Operator */
+c-[p] { color: #999999 } /* Punctuation */
+c-[s] { color: #a67f59 } /* Literal.String */
+c-[t] { color: #a67f59 } /* Literal.String.Single */
+c-[u] { color: #a67f59 } /* Literal.String.Double */
+c-[cp] { color: #708090 } /* Comment.Preproc */
+c-[c1] { color: #708090 } /* Comment.Single */
+c-[cs] { color: #708090 } /* Comment.Special */
+c-[kc] { color: #990055 } /* Keyword.Constant */
+c-[kn] { color: #990055 } /* Keyword.Namespace */
+c-[kp] { color: #990055 } /* Keyword.Pseudo */
+c-[kr] { color: #990055 } /* Keyword.Reserved */
+c-[ld] { color: #000000 } /* Literal.Date */
+c-[nc] { color: #0077aa } /* Name.Class */
+c-[no] { color: #0077aa } /* Name.Constant */
+c-[nd] { color: #0077aa } /* Name.Decorator */
+c-[ni] { color: #0077aa } /* Name.Entity */
+c-[ne] { color: #0077aa } /* Name.Exception */
+c-[nf] { color: #0077aa } /* Name.Function */
+c-[nl] { color: #0077aa } /* Name.Label */
+c-[nn] { color: #0077aa } /* Name.Namespace */
+c-[py] { color: #0077aa } /* Name.Property */
+c-[ow] { color: #999999 } /* Operator.Word */
+c-[mb] { color: #000000 } /* Literal.Number.Bin */
+c-[mf] { color: #000000 } /* Literal.Number.Float */
+c-[mh] { color: #000000 } /* Literal.Number.Hex */
+c-[mi] { color: #000000 } /* Literal.Number.Integer */
+c-[mo] { color: #000000 } /* Literal.Number.Oct */
+c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
+c-[sc] { color: #a67f59 } /* Literal.String.Char */
+c-[sd] { color: #a67f59 } /* Literal.String.Doc */
+c-[se] { color: #a67f59 } /* Literal.String.Escape */
+c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
+c-[si] { color: #a67f59 } /* Literal.String.Interpol */
+c-[sx] { color: #a67f59 } /* Literal.String.Other */
+c-[sr] { color: #a67f59 } /* Literal.String.Regex */
+c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
+c-[vc] { color: #0077aa } /* Name.Variable.Class */
+c-[vg] { color: #0077aa } /* Name.Variable.Global */
+c-[vi] { color: #0077aa } /* Name.Variable.Instance */
+c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
+</style>
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Architecture Decentralized Digital Heritage Network</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard, <time class="dt-updated" datetime="2021-06-10">10 June 2021</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard, <time class="dt-updated" datetime="2021-09-03">3 September 2021</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1448,13 +1506,13 @@ dfn > a.self-link::before      { content: "#"; }</style>
      <dd><a href="https://github.com/ErfgoedPod/architecture/issues/">GitHub</a>
      <dd><a href="#issues-index">Inline In Spec</a>
      <dt class="editor">Editor:
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:miel.vandersande@meemoo.be">Miel Vander Sande</a> (<a class="p-org org" href="http://meemoo.be">meemoo</a>)
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:miel.vandersande@meemoo.be">Miel Vander Sande</a> (<span class="p-org org"><a href="https://meemoo.be">meemoo</a></span>)
     </dl>
    </div>
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a> To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 10 June 2021,
+In addition, as of 3 September 2021,
 the editors have made this specification available under the <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
 Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document. </p>
@@ -1481,6 +1539,17 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#participate"><span class="secno">6.3</span> <span class="content">Participating in a decentralized Digital Heritage Network {#participate}</span></a>
       <li><a href="#collection-information-from-a-decentralized-digital-heritage-network"><span class="secno">6.4</span> <span class="content">Collection information from a decentralized Digital Heritage Network</span></a>
      </ol>
+    <li>
+     <a href="#technical-aspects"><span class="secno">7</span> <span class="content">Technical aspects</span></a>
+     <ol class="toc">
+      <li><a href="#webid"><span class="secno">7.1</span> <span class="content">WebID</span></a>
+      <li><a href="#linked-data-notifications-ldn"><span class="secno">7.2</span> <span class="content">Linked Data Notifications (LDN)</span></a>
+      <li>
+       <a href="#eventlog"><span class="secno">7.3</span> <span class="content">Eventlog</span></a>
+       <ol class="toc">
+        <li><a href="#rulebook"><span class="secno">7.3.1</span> <span class="content">Rulebook</span></a>
+       </ol>
+     </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
     <li>
      <a href="#index"><span class="secno"></span> <span class="content">Index</span></a>
@@ -1498,7 +1567,7 @@ Parts of this work may be from another specification document.  If so, those par
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="set-of-documents"><span class="secno">1. </span><span class="content">Set of documents</span><a class="self-link" href="#set-of-documents"></a></h2>
-   <p>This document is one of the <em>Decentralized Digital Heritage Network</em> specifications produced by the ErfgoedPod project by <a href="https://netwerkdigitaalerfgoed.nl">Netwerk Digitaal Erfgoed</a>, <a href="https://meemoo.be">meemoo - Flemish Institute for Archiving</a> and <a href="http://idlab.ugent.be">Ghent University - IDLab</a>:</p>
+   <p>This document is one of the <em>Decentralized Digital Heritage Network</em> specifications produced by the ErfgoedPod project by <a href="https://netwerkdigitaalerfgoed.nl">Netwerk Digitaal Erfgoed</a>, <a href="https://meemoo.be">meemoo - Flemish Institute for Archives</a> and <a href="http://idlab.ugent.be">Ghent University - IDLab</a>:</p>
    <ol>
     <li data-md>
      <p><a href="/architecture/">Decentralized Digital Heritage Network architecture</a> (this document)</p>
@@ -2507,6 +2576,50 @@ these components commonly complement a <a data-link-type="dfn" href="#digital-he
      </a>
     </switch>
    </svg>
+   <h2 class="heading settled" data-level="7" id="technical-aspects"><span class="secno">7. </span><span class="content">Technical aspects</span><a class="self-link" href="#technical-aspects"></a></h2>
+   <h3 class="heading settled" data-level="7.1" id="webid"><span class="secno">7.1. </span><span class="content">WebID</span><a class="self-link" href="#webid"></a></h3>
+   <p>Simple universal identification mechanism for the Web and a core aspect of Solid. Used in ErfgoedPod to identify acting organisations in the network (eg. a Cultural Heritage Institution, a Registry, ...)</p>
+   <p>Example: http://kb.nl#me</p>
+   <h3 class="heading settled" data-level="7.2" id="linked-data-notifications-ldn"><span class="secno">7.2. </span><span class="content">Linked Data Notifications (LDN)</span><a class="self-link" href="#linked-data-notifications-ldn"></a></h3>
+   <p>Communication protocol between two actors in the network. Defines an inbox to receive an <a data-link-type="biblio" href="#biblio-ldn">[LDN]</a>. An inbox can be discovered thorugh a <code>Link</code> header when requesting a resource, like the WebID.</p>
+   <p>Example:</p>
+<pre class="language-http highlight"><c- nf>POST</c-> <c- nn>/inbox</c-> <c- kr>HTTP</c-><c- o>/</c-><c- m>1.1</c->
+<c- e>Host</c-><c- o>:</c-> <c- l>registry.nde.nl</c->
+<c- e>Content-Type</c-><c- o>:</c-> <c- l>application/ld+json;profile="https://www.w3.org/ns/activitystreams"</c->
+<c- e>Content-Language</c-><c- o>:</c-> <c- l>en</c->
+
+<c- p>{</c->
+  <c- nd>"@context"</c-><c- p>:</c-> <c- u>"https://www.w3.org/ns/activitystreams"</c-><c- p>,</c->
+  <c- f>"summary"</c-><c- p>:</c-> <c- u>"KB created dataset.ttl"</c-><c- p>,</c->
+  <c- f>"type"</c-><c- p>:</c-> <c- u>"Create"</c-><c- p>,</c->
+  <c- f>"actor"</c-><c- p>:</c-> <c- u>"http://kb.nl#me"</c-><c- p>,</c->
+  <c- f>"object"</c-><c- p>:</c-> <c- u>"created pod.kb.nl/dataset.ttl"</c->
+<c- p>}</c->
+</pre>
+   <h3 class="heading settled" data-level="7.3" id="eventlog"><span class="secno">7.3. </span><span class="content">Eventlog</span><a class="self-link" href="#eventlog"></a></h3>
+   <p>The eventlog is a mandatory log stored in each Pod or Service Hub (eg. Registry) that participates in the network. Lifecycle events of datasets (and other artefacts) are stored there.</p>
+   <p>Example:</p>
+   <p>pod.kb.nl/eventlog</p>
+<pre>@prefix lode: &lt;http://linkedevents.org/ontology/>.
+@prefix time: &lt;http://www.w3.org/2006/time#>.
+
+_:1 a lode:Event;
+    lode:atTime [ 
+        a time:Instant; 
+        time:inXSDDateTimeStamp  2020-04-12T10:30:00+10:00 . 
+    ];
+    lode:involvedAgent &lt;http://kb.nl#me>;
+    dc:description "Created pod.kb.nl/dataset.ttl".
+
+...
+</pre>
+<pre>[2020-04-12T10:30:00+10:00] Created pod.kb.nl/dataset.ttl
+[2020-04-12T11:30:00+10:00] Created pod.kb.nl/dataset-desc.ttl
+[2020-04-12T12:30:00+10:00] Requested registration: pod.kb.nl/dataset.ttl with registry.nde.nl
+[2020-04-12T13:30:00+10:00] registry.nde.nl registered pod.kb.nl/dataset.ttl
+</pre>
+   <h4 class="heading settled" data-level="7.3.1" id="rulebook"><span class="secno">7.3.1. </span><span class="content">Rulebook</span><a class="self-link" href="#rulebook"></a></h4>
+   <p>A rulebook is a configuration file with machine-readable business rules and is the driver for the Orchestrator component. It dictates what actions the Orchestrator should take when it is notified of an event (typically by an incoming Linked Data Notification).</p>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="#conformance"></a></h2>
