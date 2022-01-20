@@ -1223,7 +1223,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5f7b0e20, updated Tue Aug 18 15:46:28 2020 -0700" name="generator">
   <link href="https://github.com/ErfgoedPod/architecture" rel="canonical">
-  <meta content="8dc8fc4b19572a63b86b60a9ed6b56c0414906b0" name="document-revision">
+  <meta content="4c8054593d395abd8d4b4b28389b7f1dbaed809b" name="document-revision">
 <style>
 table {
   margin: 25px auto;
@@ -1497,7 +1497,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Architecture Decentralized Digital Heritage Network</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard, <time class="dt-updated" datetime="2021-09-03">3 September 2021</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Document, <time class="dt-updated" datetime="2022-01-20">20 January 2022</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1512,7 +1512,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a> To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 3 September 2021,
+In addition, as of 20 January 2022,
 the editors have made this specification available under the <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
 Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document. </p>
@@ -1534,10 +1534,10 @@ Parts of this work may be from another specification document.  If so, those par
     <li>
      <a href="#components"><span class="secno">6</span> <span class="content">Components</span></a>
      <ol class="toc">
-      <li><a href="#pod"><span class="secno">6.1</span> <span class="content">Digital Heritage Pod {#pod}</span></a>
-      <li><a href="#hubs"><span class="secno">6.2</span> <span class="content">Digital Heritage Service Hub</span></a>
-      <li><a href="#participate"><span class="secno">6.3</span> <span class="content">Participating in a decentralized Digital Heritage Network {#participate}</span></a>
-      <li><a href="#collection-information-from-a-decentralized-digital-heritage-network"><span class="secno">6.4</span> <span class="content">Collection information from a decentralized Digital Heritage Network</span></a>
+      <li><a href="#pod"><span class="secno">6.1</span> <span class="content">Digital Heritage Pod</span></a>
+      <li><a href="#hub"><span class="secno">6.2</span> <span class="content">Digital Heritage Service Hub</span></a>
+      <li><a href="#participate"><span class="secno">6.3</span> <span class="content">Participating in a decentralized Digital Heritage Network</span></a>
+      <li><a href="#collector"><span class="secno">6.4</span> <span class="content">Collection information from a decentralized Digital Heritage Network</span></a>
      </ol>
     <li>
      <a href="#technical-aspects"><span class="secno">7</span> <span class="content">Technical aspects</span></a>
@@ -1838,10 +1838,10 @@ For instance, a dataset (= artefact) can only be archived by an archiving servic
    </ul>
    <p class="issue" id="issue-d9c99afd"><a class="self-link" href="#issue-d9c99afd"></a> complete the list of lifecycle events.</p>
    <h2 class="heading settled" data-level="6" id="components"><span class="secno">6. </span><span class="content">Components</span><a class="self-link" href="#components"></a></h2>
-   <h3 class="heading settled" data-level="6.1" id="pod"><span class="secno">6.1. </span><span class="content">Digital Heritage Pod {#pod}</span><a class="self-link" href="#pod"></a></h3>
+   <h3 class="heading settled" data-level="6.1" id="pod"><span class="secno">6.1. </span><span class="content">Digital Heritage Pod</span><a class="self-link" href="#pod"></a></h3>
    <p>The <dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="digital-heritage-pod">Digital Heritage Pod</dfn> is a <a data-link-type="dfn" href="#cultural-heritage-institution" id="ref-for-cultural-heritage-institution①">Cultural Heritage Institution</a>'s main exchange hub for sharing digital heritage information with external <a data-link-type="dfn" href="#service-provider" id="ref-for-service-provider①">service provider</a> and other <a data-link-type="dfn" href="#cultural-heritage-institution" id="ref-for-cultural-heritage-institution②">cultural heritage institutions</a>.
 By design, the <a data-link-type="dfn" href="#digital-heritage-pod" id="ref-for-digital-heritage-pod①">Digital Heritage Pod</a> is a passive component: it can respond to requests for the <a data-link-type="dfn" href="#digital-heritage-artefact" id="ref-for-digital-heritage-artefact">digital heritage artefacts</a> it stores, 
-but cannot start an interaction with other <a data-link-type="dfn" href="#actor" id="ref-for-actor①">actors</a> (see the additional components layed out in <a href="#participate">§ 6.3 Participating in a decentralized Digital Heritage Network {#participate}</a> for active participation).</p>
+but cannot start an interaction with other <a data-link-type="dfn" href="#actor" id="ref-for-actor①">actors</a> (see the additional components layed out in <a href="#participate">§ 6.3 Participating in a decentralized Digital Heritage Network</a> for active participation).</p>
    <p>The Digital Heritage Pod’s core fundament is a Solid Data Pod <a href="https://solidproject.org/TR/protocol/#data-pod">The Solid Protocol §data-pod</a> consisting of:</p>
    <ul>
     <li data-md>
@@ -1997,7 +1997,7 @@ but cannot start an interaction with other <a data-link-type="dfn" href="#actor"
      </a>
     </switch>
    </svg>
-   <h3 class="heading settled" data-level="6.2" id="hubs"><span class="secno">6.2. </span><span class="content">Digital Heritage Service Hub</span><a class="self-link" href="#hubs"></a></h3>
+   <h3 class="heading settled" data-level="6.2" id="hub"><span class="secno">6.2. </span><span class="content">Digital Heritage Service Hub</span><a class="self-link" href="#hub"></a></h3>
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="digital-heritage-service-hub">Digital Heritage Service Hub</dfn> is a <a data-link-type="dfn" href="#service-provider" id="ref-for-service-provider②">service provider</a>'s exchange hub to make its services available to other network actors such as <a data-link-type="dfn" href="#cultural-heritage-institution" id="ref-for-cultural-heritage-institution④">cultural heritage institutions</a> or <a data-link-type="dfn" href="#service-portal" id="ref-for-service-portal①">service portals</a>.
 It consists of some of the same interface components as the <a data-link-type="dfn" href="#digital-heritage-pod" id="ref-for-digital-heritage-pod②">Digital Heritage Pod</a>:</p>
    <ul>
@@ -2082,7 +2082,7 @@ It consists of some of the same interface components as the <a data-link-type="d
      </a>
     </switch>
    </svg>
-   <h3 class="heading settled" data-level="6.3" id="participate"><span class="secno">6.3. </span><span class="content">Participating in a decentralized Digital Heritage Network {#participate}</span><a class="self-link" href="#participate"></a></h3>
+   <h3 class="heading settled" data-level="6.3" id="participate"><span class="secno">6.3. </span><span class="content">Participating in a decentralized Digital Heritage Network</span><a class="self-link" href="#participate"></a></h3>
    <p>To actively participate in the network, <a data-link-type="dfn" href="#actor" id="ref-for-actor②">actors</a> require a few components that enable them to interact with other <a data-link-type="dfn" href="#actor" id="ref-for-actor③">actors</a>.
 For <a data-link-type="dfn" href="#cultural-heritage-institution" id="ref-for-cultural-heritage-institution⑤">cultural heritage institutions</a>), 
 these components commonly complement a <a data-link-type="dfn" href="#digital-heritage-pod" id="ref-for-digital-heritage-pod④">digital heritage pod</a> or <a data-link-type="dfn" href="#digital-heritage-service-hub" id="ref-for-digital-heritage-service-hub">Digital Heritage Service Hub</a>.</p>
@@ -2271,7 +2271,7 @@ these components commonly complement a <a data-link-type="dfn" href="#digital-he
      </a>
     </switch>
    </svg>
-   <h3 class="heading settled" data-level="6.4" id="collection-information-from-a-decentralized-digital-heritage-network"><span class="secno">6.4. </span><span class="content">Collection information from a decentralized Digital Heritage Network</span><a class="self-link" href="#collection-information-from-a-decentralized-digital-heritage-network"></a></h3>
+   <h3 class="heading settled" data-level="6.4" id="collector"><span class="secno">6.4. </span><span class="content">Collection information from a decentralized Digital Heritage Network</span><a class="self-link" href="#collector"></a></h3>
    <p>Actors retrieve two types of information from the network:</p>
    <ul>
     <li data-md>
@@ -3419,17 +3419,17 @@ The process description, the involvement of the <code class="idl"><a data-link-t
    <b><a href="#actor">#actor</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-actor">4. Actors</a>
-    <li><a href="#ref-for-actor①">6.1. Digital Heritage Pod {#pod}</a>
-    <li><a href="#ref-for-actor②">6.3. Participating in a decentralized Digital Heritage Network {#participate}</a> <a href="#ref-for-actor③">(2)</a> <a href="#ref-for-actor④">(3)</a>
+    <li><a href="#ref-for-actor①">6.1. Digital Heritage Pod</a>
+    <li><a href="#ref-for-actor②">6.3. Participating in a decentralized Digital Heritage Network</a> <a href="#ref-for-actor③">(2)</a> <a href="#ref-for-actor④">(3)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="cultural-heritage-institution">
    <b><a href="#cultural-heritage-institution">#cultural-heritage-institution</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-cultural-heritage-institution">5. Artefacts</a>
-    <li><a href="#ref-for-cultural-heritage-institution①">6.1. Digital Heritage Pod {#pod}</a> <a href="#ref-for-cultural-heritage-institution②">(2)</a> <a href="#ref-for-cultural-heritage-institution③">(3)</a>
+    <li><a href="#ref-for-cultural-heritage-institution①">6.1. Digital Heritage Pod</a> <a href="#ref-for-cultural-heritage-institution②">(2)</a> <a href="#ref-for-cultural-heritage-institution③">(3)</a>
     <li><a href="#ref-for-cultural-heritage-institution④">6.2. Digital Heritage Service Hub</a>
-    <li><a href="#ref-for-cultural-heritage-institution⑤">6.3. Participating in a decentralized Digital Heritage Network {#participate}</a>
+    <li><a href="#ref-for-cultural-heritage-institution⑤">6.3. Participating in a decentralized Digital Heritage Network</a>
     <li><a href="#ref-for-cultural-heritage-institution⑥">8.1. (BP1) Initialize a Digital Heritage Pod</a> <a href="#ref-for-cultural-heritage-institution⑦">(2)</a>
     <li><a href="#ref-for-cultural-heritage-institution⑧">8.2. (BP2) Register an Orchestrator for a Digital Heritage Pod</a> <a href="#ref-for-cultural-heritage-institution⑨">(2)</a> <a href="#ref-for-cultural-heritage-institution①⓪">(3)</a>
     <li><a href="#ref-for-cultural-heritage-institution①①">8.3. (BP3) Adding a Cultural Heritage Institution to the Registry</a> <a href="#ref-for-cultural-heritage-institution①②">(2)</a> <a href="#ref-for-cultural-heritage-institution①③">(3)</a> <a href="#ref-for-cultural-heritage-institution①④">(4)</a> <a href="#ref-for-cultural-heritage-institution①⑤">(5)</a> <a href="#ref-for-cultural-heritage-institution①⑥">(6)</a> <a href="#ref-for-cultural-heritage-institution①⑦">(7)</a> <a href="#ref-for-cultural-heritage-institution①⑧">(8)</a> <a href="#ref-for-cultural-heritage-institution①⑨">(9)</a> <a href="#ref-for-cultural-heritage-institution②⓪">(10)</a> <a href="#ref-for-cultural-heritage-institution②①">(11)</a> <a href="#ref-for-cultural-heritage-institution②②">(12)</a>
@@ -3445,7 +3445,7 @@ The process description, the involvement of the <code class="idl"><a data-link-t
    <b><a href="#service-provider">#service-provider</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-service-provider">5. Artefacts</a>
-    <li><a href="#ref-for-service-provider①">6.1. Digital Heritage Pod {#pod}</a>
+    <li><a href="#ref-for-service-provider①">6.1. Digital Heritage Pod</a>
     <li><a href="#ref-for-service-provider②">6.2. Digital Heritage Service Hub</a>
    </ul>
   </aside>
@@ -3462,8 +3462,8 @@ The process description, the involvement of the <code class="idl"><a data-link-t
   <aside class="dfn-panel" data-for="digital-heritage-artefact">
    <b><a href="#digital-heritage-artefact">#digital-heritage-artefact</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-digital-heritage-artefact">6.1. Digital Heritage Pod {#pod}</a> <a href="#ref-for-digital-heritage-artefact①">(2)</a> <a href="#ref-for-digital-heritage-artefact②">(3)</a>
-    <li><a href="#ref-for-digital-heritage-artefact③">6.3. Participating in a decentralized Digital Heritage Network {#participate}</a>
+    <li><a href="#ref-for-digital-heritage-artefact">6.1. Digital Heritage Pod</a> <a href="#ref-for-digital-heritage-artefact①">(2)</a> <a href="#ref-for-digital-heritage-artefact②">(3)</a>
+    <li><a href="#ref-for-digital-heritage-artefact③">6.3. Participating in a decentralized Digital Heritage Network</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="dataset">
@@ -3478,16 +3478,16 @@ The process description, the involvement of the <code class="idl"><a data-link-t
    <b><a href="#lifecycle-event">#lifecycle-event</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-lifecycle-event">5. Artefacts</a>
-    <li><a href="#ref-for-lifecycle-event①">6.3. Participating in a decentralized Digital Heritage Network {#participate}</a> <a href="#ref-for-lifecycle-event②">(2)</a>
+    <li><a href="#ref-for-lifecycle-event①">6.3. Participating in a decentralized Digital Heritage Network</a> <a href="#ref-for-lifecycle-event②">(2)</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="digital-heritage-pod">
    <b><a href="#digital-heritage-pod">#digital-heritage-pod</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-digital-heritage-pod">5. Artefacts</a>
-    <li><a href="#ref-for-digital-heritage-pod①">6.1. Digital Heritage Pod {#pod}</a>
+    <li><a href="#ref-for-digital-heritage-pod①">6.1. Digital Heritage Pod</a>
     <li><a href="#ref-for-digital-heritage-pod②">6.2. Digital Heritage Service Hub</a> <a href="#ref-for-digital-heritage-pod③">(2)</a>
-    <li><a href="#ref-for-digital-heritage-pod④">6.3. Participating in a decentralized Digital Heritage Network {#participate}</a> <a href="#ref-for-digital-heritage-pod⑤">(2)</a> <a href="#ref-for-digital-heritage-pod⑥">(3)</a>
+    <li><a href="#ref-for-digital-heritage-pod④">6.3. Participating in a decentralized Digital Heritage Network</a> <a href="#ref-for-digital-heritage-pod⑤">(2)</a> <a href="#ref-for-digital-heritage-pod⑥">(3)</a>
     <li><a href="#ref-for-digital-heritage-pod⑦">8.1. (BP1) Initialize a Digital Heritage Pod</a> <a href="#ref-for-digital-heritage-pod⑧">(2)</a> <a href="#ref-for-digital-heritage-pod⑨">(3)</a>
     <li><a href="#ref-for-digital-heritage-pod①⓪">8.2. (BP2) Register an Orchestrator for a Digital Heritage Pod</a> <a href="#ref-for-digital-heritage-pod①①">(2)</a> <a href="#ref-for-digital-heritage-pod①②">(3)</a>
     <li><a href="#ref-for-digital-heritage-pod①③">8.3. (BP3) Adding a Cultural Heritage Institution to the Registry</a> <a href="#ref-for-digital-heritage-pod①④">(2)</a> <a href="#ref-for-digital-heritage-pod①⑤">(3)</a>
@@ -3500,7 +3500,7 @@ The process description, the involvement of the <code class="idl"><a data-link-t
   <aside class="dfn-panel" data-for="datastore">
    <b><a href="#datastore">#datastore</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-datastore">6.1. Digital Heritage Pod {#pod}</a>
+    <li><a href="#ref-for-datastore">6.1. Digital Heritage Pod</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="artefact-lifecycle-event-log">
@@ -3512,7 +3512,7 @@ The process description, the involvement of the <code class="idl"><a data-link-t
   <aside class="dfn-panel" data-for="digital-heritage-service-hub">
    <b><a href="#digital-heritage-service-hub">#digital-heritage-service-hub</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-digital-heritage-service-hub">6.3. Participating in a decentralized Digital Heritage Network {#participate}</a> <a href="#ref-for-digital-heritage-service-hub①">(2)</a>
+    <li><a href="#ref-for-digital-heritage-service-hub">6.3. Participating in a decentralized Digital Heritage Network</a> <a href="#ref-for-digital-heritage-service-hub①">(2)</a>
    </ul>
   </aside>
 <script>/* script-dfn-panel */
