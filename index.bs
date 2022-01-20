@@ -2,7 +2,7 @@
 Title: Architecture Decentralized Digital Heritage Network
 Shortname: architecture
 Level: 1
-Status: LS
+Status: LD
 URL: https://github.com/ErfgoedPod/architecture
 Editor: Miel Vander Sande, [meemoo](https://meemoo.be), miel.vandersande@meemoo.be
 Abstract: This specification gives a high-level overview of a decentralized digital heritage network using principles from Solid and the Researcher Pod project.
@@ -124,7 +124,7 @@ Issue: complete the list of lifecycle events.
 Components {#components}
 ========================
 
-## Digital Heritage Pod {#pod}
+## Digital Heritage Pod ## {#pod}
 
 The <dfn export>Digital Heritage Pod</dfn> is a [=Cultural Heritage Institution=]'s main exchange hub for sharing digital heritage information with external [=service provider=] and other [=cultural heritage institutions=].
 By design, the [=Digital Heritage Pod=] is a passive component: it can respond to requests for the [=digital heritage artefacts=] it stores, 
@@ -149,7 +149,7 @@ path: images/erfgoedpod-Erfgoedpod.svg
 
 
 
-## Digital Heritage Service Hub ## {#hubs}
+## Digital Heritage Service Hub ## {#hub}
 
 A <dfn export>Digital Heritage Service Hub</dfn> is a [=service provider=]'s exchange hub to make its services available to other network actors such as [=cultural heritage institutions=] or [=service portals=].
 It consists of some of the same interface components as the [=Digital Heritage Pod=]:
@@ -164,7 +164,7 @@ In contrast to the [=Digital Heritage Pod=], it is unspecified what other subcom
 path: images/erfgoedpod-ServiceHub.svg
 </pre>
 
-## Participating in a decentralized Digital Heritage Network {#participate}
+## Participating in a decentralized Digital Heritage Network ## {#participate}
 
 To actively participate in the network, 
 [=actors=] require a few components that enable them to interact with other [=actors=].
@@ -181,7 +181,7 @@ Interations between [=actors=] are always about a [=digital heritage artefact=] 
 path: images/erfgoedpod-BasicSetup.svg
 </pre>
 
-## Collection information from a decentralized Digital Heritage Network
+## Collection information from a decentralized Digital Heritage Network ## {#collector}
 
 Actors retrieve two types of information from the network:
 
