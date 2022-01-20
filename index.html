@@ -1223,7 +1223,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 5f7b0e20, updated Tue Aug 18 15:46:28 2020 -0700" name="generator">
   <link href="https://github.com/ErfgoedPod/architecture" rel="canonical">
-  <meta content="4c8054593d395abd8d4b4b28389b7f1dbaed809b" name="document-revision">
+  <meta content="c93a3951317cc7a23ed2e6becb76c223de4eb3ed" name="document-revision">
 <style>
 table {
   margin: 25px auto;
@@ -1600,6 +1600,10 @@ Parts of this work may be from another specification document.  If so, those par
      <p><a href="https://mellonscholarlycommunication.github.io/spec-rulelanguage/">Rule language</a></p>
     <li data-md>
      <p><a href="https://mellonscholarlycommunication.github.io/spec-eventlog/">Artefact Lifecycle Event Log</a></p>
+    <li data-md>
+     <p><a href="https://mellonscholarlycommunication.github.io/spec-notifications/">Notifications</a></p>
+    <li data-md>
+     <p><a href="https://mellonscholarlycommunication.github.io/spec-collector/">Collector</a></p>
    </ol>
    <h2 class="heading settled" data-level="2" id="introduction"><span class="secno">2. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
    <p>The <em>Decentralized Digital Heritage Network</em> is a protocol and a set of best practices to establish a sustainable exchange network of digital heritage data between cultural heritage institutions and their services.
@@ -1614,29 +1618,29 @@ Such party is henceforth considered a network <dfn class="dfn-paneled" data-dfn-
    <p>All <a data-link-type="dfn" href="#actor" id="ref-for-actor">actors</a> operate under the same protocol, but can differ in purpose.
 Every actor in a decentralized digital heritage network is therefore one of the following types:</p>
    <dl>
+    <dt data-md><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="cultural-heritage-institution">Cultural Heritage Institution</dfn>
     <dd data-md>
-     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="cultural-heritage-institution">Cultural Heritage Institution</dfn></p>
-    <dt data-md>an individual or organisation producing and sharing digital heritage data;
+     <p>an individual or organisation producing and sharing digital heritage data;</p>
+    <dt data-md><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="service-provider">Service provider</dfn>
     <dd data-md>
-     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="service-provider">Service provider</dfn></p>
-    <dt data-md>an organisation consuming and processing digital heritage data to provide a service to other actors in the network;
+     <p>an organisation consuming and processing digital heritage data to provide a service to other actors in the network;</p>
+    <dt data-md><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="service-portal">Service portal</dfn>
     <dd data-md>
-     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="service-portal">Service portal</dfn></p>
-    <dt data-md>an organisation consuming digital heritage data to provide a service to end-users.
+     <p>an organisation consuming digital heritage data to provide a service to end-users.</p>
    </dl>
    <h2 class="heading settled" data-level="5" id="artefacts"><span class="secno">5. </span><span class="content">Artefacts</span><a class="self-link" href="#artefacts"></a></h2>
    <p>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="digital-heritage-artefact">Digital Heritage Artefact</dfn> is a unit digital heritage data that is the object of exchange between actors.
 We distinguish the following types of artefacts:</p>
    <dl>
+    <dt data-md><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="dataset">Dataset</dfn>
     <dd data-md>
-     <p><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="dataset">dataset</dfn></p>
-    <dt data-md>The description of a collection of data as defined in <a href="https://netwerk-digitaal-erfgoed.github.io/requirements-datasets#dataset">Requirements for Datasets §dataset</a>.
+     <p>The description of a collection of data as defined in <a href="https://netwerk-digitaal-erfgoed.github.io/requirements-datasets#dataset">Requirements for Datasets §dataset</a>.</p>
+    <dt data-md><dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="dataset-description">Dataset description</dfn>
     <dd data-md>
-     <p><dfn data-dfn-type="dfn" data-export id="datasets-description">datasets description<a class="self-link" href="#datasets-description"></a></dfn></p>
-    <dt data-md>Metadata that publishers should provide about their dataset aligned with the machine-readable publication model described in <a data-link-type="biblio" href="#biblio-requirements-datasets">[requirements-datasets]</a>.
+     <p>Metadata that publishers should provide about their dataset aligned with the machine-readable publication model described in <a data-link-type="biblio" href="#biblio-requirements-datasets">[requirements-datasets]</a>.</p>
+    <dt data-md><dfn data-dfn-type="dfn" data-export id="actor-profile">Actor profile<a class="self-link" href="#actor-profile"></a></dfn>
     <dd data-md>
-     <p><dfn data-dfn-type="dfn" data-export id="actor-profile">actor profile<a class="self-link" href="#actor-profile"></a></dfn></p>
-    <dt data-md>A description of an actor that is a member of the network. Often, this is about the organisation acting as <a data-link-type="dfn" href="#cultural-heritage-institution" id="ref-for-cultural-heritage-institution">cultural heritage institution</a>, <a data-link-type="dfn" href="#service-provider" id="ref-for-service-provider">service provider</a>, or <a data-link-type="dfn" href="#service-portal" id="ref-for-service-portal">service portal</a>. It is used as part of a registration or identification proces.
+     <p>A description of an actor that is a member of the network. Often, this is about the organisation acting as <a data-link-type="dfn" href="#cultural-heritage-institution" id="ref-for-cultural-heritage-institution">cultural heritage institution</a>, <a data-link-type="dfn" href="#service-provider" id="ref-for-service-provider">service provider</a>, or <a data-link-type="dfn" href="#service-portal" id="ref-for-service-portal">service portal</a>. It is used as part of a registration or identification proces.</p>
    </dl>
    <p>All artefacts have a lifecycle that consists of a sequence of <a data-link-type="dfn" href="#lifecycle-event" id="ref-for-lifecycle-event">lifecycle events</a>.
 A <dfn class="dfn-paneled" data-dfn-type="dfn" data-export id="lifecycle-event">Lifecycle Event</dfn> is a documented activity that reflect changes to the artefact’s presence or positioning on the network.
@@ -2636,14 +2640,14 @@ _:1 a lode:Event;
    <p>A rulebook is a configuration file with machine-readable business rules and is the driver for the Orchestrator component. It dictates what actions the Orchestrator should take when it is notified of an event (typically by an incoming Linked Data Notification).</p>
    <h2 class="heading settled" data-level="8" id="application-to-business-processes"><span class="secno">8. </span><span class="content">Application to business processes</span><a class="self-link" href="#application-to-business-processes"></a></h2>
    <p>This section implements each business process from <a data-link-type="biblio" href="#biblio-bp-nde">[bp-nde]</a> using the architecture described in this document.
-The process description, the involvement of the <code class="idl"><a data-link-type="idl">#components</a></code>, and other implementation details are noted in the following template:</p>
+The process description, the involvement of the <a href="#components">§ 6 Components</a>, and other implementation details are noted in the following template:</p>
    <dl>
     <dt data-md>Roles
     <dd data-md>
      <p>The different <a href="https://erfgoedpod.github.io/usecases#roles">actor roles</a> that interact with the process.</p>
     <dt data-md>Components
     <dd data-md>
-     <p>The <code class="idl"><a data-link-type="idl">#components</a></code> that are involved.</p>
+     <p>The <a href="#components">components</a> that are involved.</p>
     <dt data-md>Goal
     <dd data-md>
      <p>The final successful outcome that completes the process.</p>
@@ -3156,7 +3160,7 @@ The process description, the involvement of the <code class="idl"><a data-link-t
           the <a data-link-type="dfn">Registry</a> cross-checks the list of subscriptions. 
         <li>If a <a data-link-type="dfn">Metadata Dataset</a> matches a subscription <a data-link-type="dfn">term</a>],
           the <a data-link-type="dfn">Registry</a> sends a notification to the inbox of the <a data-link-type="dfn" href="#service-portal" id="ref-for-service-portal①⑦">Service Portal</a>'s that are subscribed.
-          The notification contains a link to the <a data-link-type="dfn" href="#dataset" id="ref-for-dataset⑦">Dataset</a>, which was extracted from the <a data-link-type="dfn">Dataset Description</a>. 
+          The notification contains a link to the <a data-link-type="dfn" href="#dataset" id="ref-for-dataset⑦">Dataset</a>, which was extracted from the <a data-link-type="dfn" href="#dataset-description" id="ref-for-dataset-description">Dataset Description</a>. 
         <li>When receiving this notification,
           the <a data-link-type="dfn" href="#service-portal" id="ref-for-service-portal①⑧">Service Portal</a> extracts the <a data-link-type="dfn" href="#dataset" id="ref-for-dataset⑧">Dataset</a> link and downloads the <a data-link-type="dfn" href="#dataset" id="ref-for-dataset⑨">Dataset</a> from the <a data-link-type="dfn" href="#cultural-heritage-institution" id="ref-for-cultural-heritage-institution⑥②">Cultural Heritage Institution</a>'s <a data-link-type="dfn" href="#digital-heritage-pod" id="ref-for-digital-heritage-pod②④">Digital Heritage Pod</a>. 
         <li>After the download is complete, the <a data-link-type="dfn" href="#service-portal" id="ref-for-service-portal①⑨">Service Portal</a> processes the <a data-link-type="dfn" href="#dataset" id="ref-for-dataset①⓪">Dataset</a>. 
@@ -3215,7 +3219,7 @@ The process description, the involvement of the <code class="idl"><a data-link-t
           the <a data-link-type="dfn">Registry</a> cross-checks the list of subscriptions. 
         <li>If a <a data-link-type="dfn">Metadata Term Source</a> matches a subscription <a data-link-type="dfn">term</a>],
           the <a data-link-type="dfn">Registry</a> sends a notification to the inbox of the <a data-link-type="dfn" href="#service-portal" id="ref-for-service-portal②①">Service Portal</a>'s that are subscribed.
-          The notification contains a link to the <a data-link-type="dfn">Term Source</a>, which was extracted from the <a data-link-type="dfn">Dataset Description</a>. 
+          The notification contains a link to the <a data-link-type="dfn">Term Source</a>, which was extracted from the <a data-link-type="dfn" href="#dataset-description" id="ref-for-dataset-description①">Dataset Description</a>. 
         <li>When receiving this notification,
           the <a data-link-type="dfn">Network of Terms</a> extracts the <a data-link-type="dfn">Term Source</a> link and downloads the <a data-link-type="dfn">Term Source</a> from the <a data-link-type="dfn" href="#cultural-heritage-institution" id="ref-for-cultural-heritage-institution⑥⑤">Cultural Heritage Institution</a>'s <a data-link-type="dfn" href="#digital-heritage-pod" id="ref-for-digital-heritage-pod②⑥">Digital Heritage Pod</a>. 
         <li>After the download is complete, the <a data-link-type="dfn">Network of Terms</a> processes the <a data-link-type="dfn">Term Source</a>. 
@@ -3374,11 +3378,11 @@ The process description, the involvement of the <code class="idl"><a data-link-t
   <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
   <ul class="index">
    <li><a href="#actor">actor</a><span>, in §4</span>
-   <li><a href="#actor-profile">actor profile</a><span>, in §5</span>
+   <li><a href="#actor-profile">Actor profile</a><span>, in §5</span>
    <li><a href="#artefact-lifecycle-event-log">Artefact Lifecycle Event Log</a><span>, in §6.1</span>
    <li><a href="#cultural-heritage-institution">Cultural Heritage Institution</a><span>, in §4</span>
-   <li><a href="#dataset">dataset</a><span>, in §5</span>
-   <li><a href="#datasets-description">datasets description</a><span>, in §5</span>
+   <li><a href="#dataset">Dataset</a><span>, in §5</span>
+   <li><a href="#dataset-description">Dataset description</a><span>, in §5</span>
    <li><a href="#datastore">datastore</a><span>, in §6.1</span>
    <li><a href="#digital-heritage-artefact">Digital Heritage Artefact</a><span>, in §5</span>
    <li><a href="#digital-heritage-pod">Digital Heritage Pod</a><span>, in §6.1</span>
@@ -3472,6 +3476,13 @@ The process description, the involvement of the <code class="idl"><a data-link-t
     <li><a href="#ref-for-dataset">8.4. (BP4) Adding a new Dataset to the Registry #</a> <a href="#ref-for-dataset①">(2)</a>
     <li><a href="#ref-for-dataset②">8.5. (BP5) Updating a Dataset in the Registry #</a> <a href="#ref-for-dataset③">(2)</a> <a href="#ref-for-dataset④">(3)</a>
     <li><a href="#ref-for-dataset⑤">8.9. (BP9) Discovering a dataset related to a subscribed topic</a> <a href="#ref-for-dataset⑥">(2)</a> <a href="#ref-for-dataset⑦">(3)</a> <a href="#ref-for-dataset⑧">(4)</a> <a href="#ref-for-dataset⑨">(5)</a> <a href="#ref-for-dataset①⓪">(6)</a>
+   </ul>
+  </aside>
+  <aside class="dfn-panel" data-for="dataset-description">
+   <b><a href="#dataset-description">#dataset-description</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="#ref-for-dataset-description">8.9. (BP9) Discovering a dataset related to a subscribed topic</a>
+    <li><a href="#ref-for-dataset-description①">8.10. (BP10) Discovering a Term source</a>
    </ul>
   </aside>
   <aside class="dfn-panel" data-for="lifecycle-event">
