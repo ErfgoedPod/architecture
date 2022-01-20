@@ -51,6 +51,8 @@ This project also contributes to the following companion specifications of the [
 2. [Data Pod](https://mellonscholarlycommunication.github.io/spec-datapod/)
 3. [Rule language](https://mellonscholarlycommunication.github.io/spec-rulelanguage/)
 4. [Artefact Lifecycle Event Log](https://mellonscholarlycommunication.github.io/spec-eventlog/)
+5. [Notifications](https://mellonscholarlycommunication.github.io/spec-notifications/)
+6. [Collector](https://mellonscholarlycommunication.github.io/spec-collector/)
 
 Introduction {#introduction}
 ============================
@@ -77,12 +79,12 @@ Such party is henceforth considered a network <dfn export>actor</dfn>.
 All [=actors=] operate under the same protocol, but can differ in purpose.
 Every actor in a decentralized digital heritage network is therefore one of the following types:
 
-:: <dfn export>Cultural Heritage Institution</dfn>
-: an individual or organisation producing and sharing digital heritage data;
-:: <dfn export>Service provider</dfn>
-: an organisation consuming and processing digital heritage data to provide a service to other actors in the network;
-:: <dfn export>Service portal</dfn>
-: an organisation consuming digital heritage data to provide a service to end-users.
+: <dfn export>Cultural Heritage Institution</dfn>
+:: an individual or organisation producing and sharing digital heritage data;
+: <dfn export>Service provider</dfn>
+:: an organisation consuming and processing digital heritage data to provide a service to other actors in the network;
+: <dfn export>Service portal</dfn>
+:: an organisation consuming digital heritage data to provide a service to end-users.
 
 
 Artefacts {#artefacts}
@@ -91,12 +93,12 @@ Artefacts {#artefacts}
 A <dfn export>Digital Heritage Artefact</dfn> is a unit digital heritage data that is the object of exchange between actors.
 We distinguish the following types of artefacts:
 
-:: <dfn export>dataset</dfn>
-: The description of a collection of data as defined in [[requirements-datasets#dataset]].
-:: <dfn export>datasets description</dfn>
-: Metadata that publishers should provide about their dataset aligned with the machine-readable publication model described in [[requirements-datasets]].
-:: <dfn export>actor profile</dfn>
-: A description of an actor that is a member of the network. Often, this is about the organisation acting as [=cultural heritage institution=], [=service provider=], or [=service portal=]. It is used as part of a registration or identification proces.
+: <dfn export>Dataset</dfn>
+:: The description of a collection of data as defined in [[requirements-datasets#dataset]].
+: <dfn export>Dataset description</dfn>
+:: Metadata that publishers should provide about their dataset aligned with the machine-readable publication model described in [[requirements-datasets]].
+: <dfn export>Actor profile</dfn>
+:: A description of an actor that is a member of the network. Often, this is about the organisation acting as [=cultural heritage institution=], [=service provider=], or [=service portal=]. It is used as part of a registration or identification proces.
 
 All artefacts have a lifecycle that consists of a sequence of [=lifecycle events=].
 A <dfn export>Lifecycle Event</dfn> is a documented activity that reflect changes to the artefact's presence or positioning on the network.
@@ -146,7 +148,6 @@ Finally, the pod exposes a <dfn export>Artefact Lifecycle Event Log</dfn>: a res
 <pre class='include'>
 path: images/erfgoedpod-Erfgoedpod.svg
 </pre>
-
 
 
 ## Digital Heritage Service Hub ## {#hub}
@@ -269,12 +270,12 @@ Application to business processes
 ==========================
 
 This section implements each business process from [[bp-nde]] using the architecture described in this document. 
-The process description, the involvement of the {{#components}}, and other implementation details are noted in the following template:
+The process description, the involvement of the [[#components]], and other implementation details are noted in the following template:
 
 : Roles     
 :: The different [[bp-nde#roles|actor roles]] that interact with the process.
 : Components
-:: The {{#components}} that are involved.
+:: The [[#components|components]] that are involved.
 : Goal             
 :: The final successful outcome that completes the process.
 : Stakeholders     
